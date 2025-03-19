@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Catalogue Week 1</title>
+    <style>
+        body {
+                width: 100vw;
+                height: 100vh;
+                font-size: 12px;
+                line-height: 1rem;
+                background-image: url("https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSYSts4ArrDU4cVKNl5AF5LhkR2dNAcbIum4FC4qHphGaIBv4_4jO4Heoco1LUTy069h2lmwpiRDmjAe-M1JWZyq5WM93oAr78JzyTjxGXNbKLBTy8MItm6KRK6rsIlr3y6TDrc&usqp=CAc"); background-repeat: repeat;
+                padding: 50px;
+            }
+        .square {
+            aspect-ratio : 1 / 1;
+            width: 10%;
+            background-color:darkgreen;
+            position: absolute;
+            z-index: 9999;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle {
+            aspect-ratio : 1 / 1;
+            width: 11%;
+            border-radius: 50%;
+            background-color: hotpink;
+            display: flex;
+            position: absolute;
+            z-index: 9997;
+            justify-content:center;
+        }
+        h1 {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                line-height: 3rem;
+                font-size: 10rem;
+                text-align: center;
+                color:
+        }
+
+        h2 {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 3rem;
+        }
+
+        .triangle {
+
+        }
+        .box-lid {
+            aspect-ratio: 1 / 1;
+            width: 35%;
+            background-color: burlywood;
+            position: fixed;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 3em;
+            right: 3em;
+            border: 3px;
+            border-color: peru;
+        }
+    </style>
+</head>
+<body>
+    <div id="drag" class="square"></div>
+    <div id="drag" class="triangle"></div>
+    <div>
+        <h1>WEEK 1</h1>
+    </div>
+    <div class="box-lid">
+         <div style="
+        aspect-ratio : 1 / 1;
+        width: 30%;
+        background-color: peru;
+        border-radius: 10px;
+        position: relative;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        left: -15px;
+        "></div>
+        <div style="
+           aspect-ratio : 1 / 1;
+           width: 33%;
+           background-color: peru;
+           border-radius: 50%;
+           position: relative;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           right: -15px;
+           ">
+        </div>
+    </div>
+
+    <section style="
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    gap: 30px;
+    line-height: 2rem;
+    font-size: 1rem;
+    "
+    >
+    <div>
+        <img src="./img/IMG_9459.jpg" alt="Gesture Diagram for Coffee Process" width="100%"/>
+    </div>
+    <div>        
+        Ideation product of a group exercise during our first class. An interactive coffee machine designed to respond to gestures for each of the steps. This way you are able to incorporate movement and exercise of your body
+    </div>
+    </section>
+    <section style="
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    gap: 30px;
+    line-height: 2rem;
+    font-size: 1rem;
+    "
+    >
+    <div>
+        <img src="./img/IMG_9461.jpg" alt="" width="600px"/>
+    </div>
+    <div>
+        Another group exercise, trying to quickly put together a html structure for a simple website layout. Not sure why we put a tags without closing them
+    </div>
+    </section>
+    <div id="drag" class="circle"></div>
+    <div>
+        <h2>Some helpful websites</h2>
+        </br>
+        <a href="https://www.w3schools.com/tags/">W3 Schools HTML Reference</a>
+        </br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN HTML Element Reference</a>
+    </div>
+    </br>
+    <table>
+        <tr>
+            <td><h2>Glossary</h2></td>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Hyper Text Markup Language - coding language to create documents for the web</td>
+        </tr>
+        <tr>
+            <td>head</td>
+            <td>contained in head tag; Information about document that is machine-readable, not visible on document, metadata</td>
+        </tr>
+        <tr>
+            <td>body</td>
+            <td>the contents of the document; what you actually see. there's only one body</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <h2>Questions</h2>
+    <ul>
+        <li>What was the command to show the source on side of google page?</li>
+        <li>Img sourcing pathway not working</li>
+        <li>How to change VSC view to not have such long stretch of writing</li>
+        <li>How to write a tag as writing and not as a tag</li>
+    </ul>
+    <script>
+    dragElement(document.getElementById("drag"));
+
+    function dragElement(elmnt) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        /* if present, the header is where you move the DIV from:*/
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        /* otherwise, move the DIV from anywhere inside the DIV:*/
+        elmnt.onmousedown = dragMouseDown;
+      }
+    
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+      }
+    
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
+    
+      function closeDragElement() {
+        /* stop moving when mouse button is released:*/
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+    </script>
+</body>
+</html>
