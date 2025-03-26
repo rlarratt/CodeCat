@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Cat Week3</title>
+    <style>
+        @font-face {
+        font-family: WorkSans;
+        src: url(/WorkSans-VariableFont_wght.ttf);
+      }
+        .body {
+           font: WorkSans;
+           font-size: 16px; 
+        }
+        .header {
+            height: 300px;
+        }
+        .cupboard {
+            display: flex;
+            margin-left: 200px;
+
+        }
+        h1 {
+            font-family: WorkSans;
+            text-align: center;
+            font-size: 100px;
+            font-weight: 200;
+        }
+        h2 {
+            font-family: WorkSans;
+            text-align: center;
+            font-size: 70px;
+            font-weight: 200;
+        }
+        p {
+            font-family: WorkSans;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 200;
+            padding: 40px;
+        }
+        .div1 {
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+
+        }
+        .hidden {
+            display: none;
+            /* position: fixed; */
+            
+        }
+        .inside{
+            border: 3px solid black;
+            background-color: rgb(255, 255, 255);
+            height: 800px;
+            width: 900px;
+            z-index: 10;
+            position: absolute;
+            left: 500px;
+            top: 200px;
+            display: flex;
+            
+
+        }
+        .record {
+            width: 40px;
+            height: 770px;
+            margin-top: 30px;
+            writing-mode: vertical-lr;
+            word-spacing: 60;
+        }
+        #vinyl-icon {
+            width: 100px;
+            position: absolute;
+            top: 300px;
+            right:300px;
+            animation: spin 3s linear infinite;
+        }
+        .open:hover {
+            background-color: grey;
+        }
+        
+        @keyframes spin {
+            from {transform: rotate(0deg)}
+            to {transform: rotate(360deg)}
+        }
+        .record-popup {
+            background-color: rgb(191, 93, 93);
+            height: 770px;
+            width: 770px;
+            z-index: 15;
+            position: absolute;
+            border: 3px solid black;
+            left: 375px;
+            top: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: scroll;
+        }
+        #record1{
+           background-color: rgb(189, 6, 6);
+        }
+        #record1:hover {
+            background-color: rgb(134, 0, 0);
+        }
+        #record2 {
+            background-color: rgb(140, 172, 213);
+        }
+        #record2:hover {
+            background-color: rgb(118, 143, 176);
+        }
+        #record3 {
+            background-color: rgb(73, 107, 77);
+        }
+        #record3:hover {
+            background-color: rgb(67, 94, 70);
+        }
+        #record4 {
+            background-color: rgb(114, 254, 50);
+        }
+        #record4:hover {
+            background-color: rgb(57, 83, 60);
+        }
+        #record5 {
+            background-color: rgb(179, 76, 156);
+        }
+        #record5:hover {
+            background-color: rgb(138, 62, 121);
+        }
+        #record6 {
+            background-color: rgb(196, 100, 15);
+        }
+        #record6:hover {
+            background-color: rgb(162, 82, 13);
+        }
+        #record7 {
+            background-color: rgb(231, 234, 231);
+        }
+        #record7:hover {
+            background-color: rgb(181, 184, 181);
+        }
+        #record8 {
+            background-color: rgb(48, 137, 147);
+        }
+        #record8:hover {
+            background-color: rgb(43, 123, 132);
+        }
+        .footer {
+            height: 1000px;
+        }
+        #WorkSans {
+            font-size: 40px;
+            font-weight: 100;
+            transition: 4s;
+        }
+        #WorkSans:hover {
+            font-size: 150px;
+            font-weight: 1000;
+        }
+        a {
+            font-family: WorkSans;
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Week 3</h1></div>
+    <audio id="Sentimental" controls autoplay muted loop style="position:absolute; bottom: 30px; right: 30px;">
+        <source src="./SentimentalMood.mp3" type="audio/mp3">
+        </audio>
+    <img src="./record-icon.png" id="vinyl-icon" onclick="unMute()"/>
+    <div class="cupboard" onclick="toggleHidden()">
+        <div class="div1 open"></div>
+        <div class="div1 door"></div>
+        
+    </div>
+    <div style="width: 40px; height: 40px; background-color: black; position: absolute; left: 520px;
+            top: 570px;"></div>
+    <div style="width: 40px; height: 40px; background-color: black; position: absolute; left: 270px;
+            top: 570px;"></div>
+    <div style="width: 8px; height: 40px; background-color: black; position: absolute; left: 460px;
+            top: 450px;"></div>
+    <div style="width: 8px; height: 40px; background-color: black; position: absolute; left: 350px;
+            top: 450px;"></div>
+            <div style="width: 100%; height: 2px; background-color: black; position: absolute; left: 0px;
+            top: 610px;"></div>
+            <a href="../index.html">Back to Cat</a>
+    <div class="hidden" id="popUp">
+        <div class="inside"><button class="record" id="record1" onclick="toggleHidden1()">IPHONE MOCKUP</button>
+            <button class="record" id="record2" onclick="toggleHidden2()">Drag 'n' Drop</button>
+            <button class="record" id="record3" onclick="toggleHidden3()">Flex Box</button>
+            <button class="record" id="record4" onclick="toggleHidden4()">Font used</button>
+            <button class="record"></button>
+            <button class="record" id="record5" onclick="toggleHidden5()">Workbook Development</button>
+            <button class="record" id="record6" onclick="toggleHidden6()">Pop Ups</button>
+            <button class="record"></button>
+            <button class="record" id="record7" onclick="toggleHidden7()">Week 3 Ideas</button>
+            <button class="record" id="record8" onclick="toggleHidden8()" style="transform: rotate(325deg); position: absolute; top: 55px; right: 280px;">Questions</button>
+        </div>
+        </div>
+        <div class="hidden" id="popUp1"><div class="record-popup" style="background-color: rgb(189, 6, 6);"><h2>Iphone Mockup</h2><p>First attempt at thinking about how some of the pages may adapt to iphone</p><img src="./img/IMG_9535.jpg" style="width: 600px;"/></div></div>
+        <div class="hidden" id="popUp2"><div class="record-popup" style="background-color: rgb(140, 172, 213);"><h2>Drag 'n' Drop</h2><p>After running into a few problems trying to make elements on Week1 page draggable I ended up, Looking at Matilda's code really helped. I kept having problems just trying to insert it, so I made a separate index page to get the code right and then brought it back into my original</p><a href="../week1/index.1.html"><p>trial drag page</p></a><a href="https://matildasutho.github.io/InteractiveMedia2024/Week2/MatildasWorkbook/index.html"><p>MatildasWorkbook</p></a><img src="./img/Screenshot2.png"/><img src="./img/Screenshot3.png"/></div></div>
+        <div class="hidden" id="popUp3"><div class="record-popup" style="background-color: rgb(73, 107, 77);"><h2>Flex Box</h2><p>Flexbox has been one of the main tools I've been learning and experimenting to build my Workbook. This 15min youtube video linked by my tutors was particularly helpful and straightforward</p><a href="https://www.youtube.com/watch?v=fYq5PXgSsbE"><img src="./img/Screenshot4.png" style="width: 700px;"/></a></div></div>
+        <div class="hidden" id="popUp4"><div class="record-popup" style="background-color: rgb(114, 254, 50);"><h2>Font Used</h2><p id="WorkSans">Aa</p><p>I've chosen WorkSans as my main typeface across the Workbook. Mainly because I wanted a versatile typeface that felt a little like some of the early sans serif typefaces. I also wanted a variable font to play with in a web space, I haven't really done this that much yet, but hopefully in the coming weeks I can. It's also free which is rad. </p></div>
+        <div class="hidden" id="popUp5"><div class="record-popup" style="background-color: rgb(179, 76, 156);"><h2>Workbook Development</h2><p></p><img src="./Screenshot1.png" style="width: 700px;"/><p>I found giving divs a background colour really helpful for seeing how my code changes were affecting the layout</p></div></div>
+        <div class="hidden" id="popUp6"><div class="record-popup" style="background-color: rgb(196, 100, 15);"><h2>Pop Ups</h2><p></p><img src="./img/Screenshot5.png" style="width: 600px;"/></div></div>
+        <div class="hidden" id="popUp7"><div class="record-popup" style="background-color: rgb(231, 234, 231);"><h2>Week 3 Ideas</h2><p></p><img src="./img/IMG_9534.jpg" style="width: 600px;"/></div>
+        <div class="hidden" id="popUp8"><div class="record-popup" style="background-color: rgb(43, 123, 132);"><h2>Questions and Shortcomings</h2><p>For Week 1 page, I was unable to get the dragged elements to disappear when 'placed' in box. Tried a few different ways but needs a little bit more time to nut it out. </br> Struggling with how to target the space between the vertical letters on the home screen. In general would like to learn more typography specific css, a little frustrating not being able to easily control kerning etc. I'm missing inDesign a little bit </br> How to get the latest popUp to be the one on top, as they all have a z-index?</br>I need to add some naviagtional elements to my pages. Especially an easier way to close these pop-ups and a button to get back to the main Code Cat page</br>I have a feeling my code is quite messy and that I'm doing things not the most efficient way. But I've just kind of been learning a few things and then only using that</p></div>
+    </div>
+    <div class="footer"><a href="../index.html">Back home</a></div>
+   <script>
+    function toggleHidden() {
+var element = document.getElementById("popUp");
+if (!element.classList.contains("hidden")) {
+element.classList.add("hidden");
+} else {
+element.classList.toggle("hidden");
+}
+}
+function toggleHidden1() {
+var element = document.getElementById("popUp1");
+if (!element.classList.contains("hidden")) {
+element.classList.add("hidden");
+} else {
+element.classList.toggle("hidden");
+}
+}
+function toggleHidden2() {
+var element = document.getElementById("popUp2");
+if (!element.classList.contains("hidden")) {
+element.classList.add("hidden");
+} else {
+element.classList.toggle("hidden");
+}
+}
+function toggleHidden3() {
+var element = document.getElementById("popUp3");
+if (!element.classList.contains("hidden")) {
+element.classList.add("hidden");
+} else {
+element.classList.toggle("hidden");
+}
+}
+function toggleHidden4() {
+var element = document.getElementById("popUp4");
+if (!element.classList.contains("hidden")) {
+element.classList.add("hidden");
+} else {
+element.classList.toggle("hidden");
+}
+}
+function toggleHidden5() {
+var element = document.getElementById("popUp5");
+if (!element.classList.contains("hidden")) {
+element.classList.add("hidden");
+} else {
+element.classList.toggle("hidden");
+}
+}
+function toggleHidden6() {
+var element = document.getElementById("popUp6");
+if (!element.classList.contains("hidden")) {
+element.classList.add("hidden");
+} else {
+element.classList.toggle("hidden");
+}
+}
+function toggleHidden7() {
+var element = document.getElementById("popUp7");
+if (!element.classList.contains("hidden")) {
+element.classList.add("hidden");
+} else {
+element.classList.toggle("hidden");
+}
+}
+function toggleHidden8() {
+var element = document.getElementById("popUp8");
+if (!element.classList.contains("hidden")) {
+element.classList.add("hidden");
+} else {
+element.classList.toggle("hidden");
+}
+}
+function unMute() {
+    var sound = document.getElementById('Sentimental');
+  sound.muted = !sound.muted;
+}
+   </script>
+</body>
+</html>
