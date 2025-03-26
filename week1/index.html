@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Catalogue Week 1</title>
+    <style>
+    
+      @font-face {
+        font-family: WorkSans;
+        src: url(/WorkSans-VariableFont_wght.ttf);
+      }
+        body {
+                width: 100vw;
+                height: 100vh;
+                font-family: WorkSans;
+                font-size: 1.2rem;
+                line-height: 2rem;
+                background-image: url("https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSYSts4ArrDU4cVKNl5AF5LhkR2dNAcbIum4FC4qHphGaIBv4_4jO4Heoco1LUTy069h2lmwpiRDmjAe-M1JWZyq5WM93oAr78JzyTjxGXNbKLBTy8MItm6KRK6rsIlr3y6TDrc&usqp=CAc"); background-repeat: repeat;
+                padding-top: 20em;
+                padding-left: 12em;
+                padding-right: 12em;
+                Margin-bottom: 28em;
+                background-size:4em;
+            }
+       
+        #square {
+            aspect-ratio : 1 / 1;
+            width: 10%;
+            background-color:darkgreen;
+            position: absolute;
+            border-radius: 10px;
+            /* box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 0.8); */
+        }
+        .fixedwrapper {
+            width: fit-content;
+            height: fit-content;
+            z-index: 1000;
+         }
+        #circle {
+            aspect-ratio : 1 / 1;
+            width: 11%;
+            border-radius: 50%;
+            background-color: rgb(218, 24, 121);
+            position: absolute;
+        }
+        h1 {
+            font-family: WorkSans;
+                line-height: 1em;
+                font-size: 12em;
+                text-align: center;
+                font-weight: 700;
+                margin-top: 14rem;
+              
+        }
+
+        h2 {
+            font-family: WorkSans;
+            font-size: 3rem;
+        }
+        h3 {
+            font-family: WorkSans;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+        .box-lid {
+            aspect-ratio: 1 / 1;
+            z-index: -1;
+            width: 25%;
+            background-color:rgb(88, 58, 15);
+            position: fixed;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 3em;
+            right: 3em;
+            padding: 2%;
+            border-style: solid;
+            border-width: 5px;
+            border-color: rgb(28, 18, 3);
+        }
+        .layer {
+            z-index: -50;
+        } 
+        #footer {
+            height: 12em;
+        }
+    </style>
+</head>
+<body>
+   <div  class= "fixedwrapper">
+    <div class= "draggable" id="square" style="top:300px; left:300px"></div>
+   </div>
+   <div  class= "fixedwrapper">
+    <div class= "draggable" id="square" style="top:300px; left:300px"></div>
+   </div>
+   <div  class= "fixedwrapper">
+    <div class= "draggable" id="square" style="top:50px; left:1700px"></div>
+   </div>
+   <div  class= "fixedwrapper">
+    <div class= "draggable" id="square" style="top:600px; left:100px"></div>
+   </div>
+   <div  class= "fixedwrapper">
+    <div class= "draggable" id="square" style="top:3500px; left:100px"></div>
+   </div>
+   <div  class= "fixedwrapper">
+    <div class= "draggable" id="square" style="top:1000px; left:1800px"></div>
+   </div>
+   <div class = "fixedwrapper"><div class="draggable" id="circle" style="top:100px; left:50px"></div></div>
+   <div class = "fixedwrapper"><div class="draggable" id="circle" style="top:755px; left:800px"></div></div>
+   <div class = "fixedwrapper"><div class="draggable" id="circle" style="top:240px; left:1200px"></div></div>
+   <div class = "fixedwrapper"><div class="draggable" id="circle" style="top:2000px; left: 800px"></div></div>
+   <div style="top: -6em; position:absolute; z-index:-5; right: 0.5vw;">
+        <h1>WEEK 1</h1>
+    </div>
+    <a href="../index.html"><p style="position: absolute;"><i>Back to the Cat</i></p></a>
+   <div class="box-lid">
+         <div class="drop-zone" style="
+        aspect-ratio : 1 / 1;
+        width: 40%;
+        background-color: rgb(195, 126, 58);
+        border-radius: 10px;
+        position: relative;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        left: -15px;
+        border-style: solid;
+        border-color: rgb(28, 18, 3);;
+        "></div>
+        <div style="
+           aspect-ratio : 1 / 1;
+           width: 44%;
+           background-color: peru;
+           border-radius: 50%;
+           position: relative;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           right: -15px;
+           border-style: solid;
+            border-color: rgb(28, 18, 3);;
+           ">
+        </div>
+    </div>
+    <section style="
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    gap: 4em;
+    margin-top: 4rem;
+    margin-left: -6px;
+    /* line-height: 2rem;
+    font-size: 1rem; */
+    ">
+    <div class= "layer" width="50%">
+        <img src="./img/IMG_9459.jpg" alt="Gesture Diagram for Coffee Process" style="width: 40em; height:52rem; border-radius:2em;"/>
+    </div>
+    <div class= "layer" width="40em">        
+        <h2>HUMAN COMPUTER IN YOUR FACE!</h2><h3><i>gestures & interfaces glossary</i></h3><p> Ideation product of a group exercise during our first class. An interactive coffee machine designed to respond to gestures for each of the steps. This way you are able to incorporate movement and exercise of your body
+    </p></div>
+    </section>
+    <section style="
+    display: flex;
+    flex-direction: row;
+    margin-left: -6px;
+    margin-top: 9rem;
+    gap: 4em;
+    /* line-height: 2rem;
+    font-size: 1rem; */
+    "
+    >
+    <div class= "layer">
+        <img src="./img/IMG_9461.jpg" alt="" style="width: 40em; height:52rem; border-radius:2em;"/>
+    </div>
+    <div class= "layer">
+       <h2>TAG!</h2><h3><i>HTML tag relay</i></h3><p> Another group exercise, trying to quickly put together a html structure for a simple website layout. Not sure why we put a tags without closing them
+    </p></div>
+    </section>
+    <img src="./img/screenshot1.png" style="height: 52rem; z-index: -5;"/>
+    <div style="margin-top: 7rem;">
+        <h2>Some helpful websites</h2>
+        </br>
+        <a href="https://www.w3schools.com/tags/">W3 Schools HTML Reference</a>
+        </br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">MDN HTML Element Reference</a>
+    </div>
+    </br>
+    <table>
+        <tr>
+            <td><h2>Glossary</h2></td>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Hyper Text Markup Language - coding language to create documents for the web</td>
+        </tr>
+        <tr>
+            <td>head</td>
+            <td>contained in head tag; Information about document that is machine-readable, not visible on document, metadata</td>
+        </tr>
+        <tr>
+            <td>body</td>
+            <td>the contents of the document; what you actually see. there's only one body</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <h2>Questions</h2>
+    <ul>
+        <li>What was the command to show the source on side of google page?</li>
+        <li>Img sourcing pathway not working</li>
+        <li>How to change VSC view to not have such long stretch of writing</li>
+        <li>How to write a tag as writing and not as a tag</li>
+    </ul>
+    
+    <div id="footer"></div>
+    <script>// Get all the elements with class name "draggable":
+        var draggableElements = document.getElementsByClassName("draggable");
+        
+        // Apply dragElement function to each draggable element:
+        for (var i = 0; i < draggableElements.length; i++) {
+          dragElement(draggableElements[i]);
+        }
+        
+        function dragElement(elmnt) {
+          var pos1 = 0,
+            pos2 = 0,
+            pos3 = 0,
+            pos4 = 0;
+          if (elmnt.getElementsByClassName(elmnt.className)[0]) {
+            elmnt.getElementsByClassName(elmnt.className)[0].onmousedown =
+              dragMouseDown;
+          } else {
+            // move the DIV from anywhere inside the DIV:
+            elmnt.onmousedown = dragMouseDown;
+          }
+        
+          function dragMouseDown(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+          }
+        
+          function elementDrag(e) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+            elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+          }
+        
+          function closeDragElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.onmousemove = null;
+          }
+        }
+        </script>
+</body>
+</html>
