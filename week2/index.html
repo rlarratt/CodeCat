@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Cat Week2</title>
+    <style>
+      @font-face {
+        font-family: WorkSans;
+        src: url(/WorkSans-VariableFont_wght.ttf);
+      }
+      body {;
+        font-size: 18px;
+        line-height: 2rem;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        padding-bottom: 8rem;
+        padding-top: 0;
+        font-family: WorkSans;
+      }
+        #red-outside {
+            background-color:rgb(220, 60, 20);
+            aspect-ratio: 1.5 / 1;
+            width: 80%;
+            padding: 30px;
+            margin: auto;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: black;
+            box-shadow: 5px 5px 10px 2px rgba(124, 124, 124, 0.8);
+        }
+        #screen {
+            background-color: rgb(224, 224, 224);
+            aspect-ratio: 1.5 / 1;
+            align-items: center;
+            border-radius: 3px;
+            
+        }
+        h1 {
+            text-align: center;
+            font-family: WorkSans;
+            font-size: 200px;
+            /* position: fixed;
+            z-index: -5; */
+        }
+        #week2 {
+          height: 200px;
+        }
+        /* .week2 {
+          position: fixed;
+          z-index: -5;
+        } */
+    </style>
+</head>
+<body>
+  <div id="week2"><h1>WEEK 2</h1></div>
+    <!-- <div id="header"></div> -->
+    <div id="red-outside">
+    <div id="screen">
+        <img id="drawing" src="./img/Week2-assets-02.png" style="width:100%;" />
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;
+    height: 40%;">
+    <button id="previousImage"style="width: 18%;
+    aspect-ratio: 1 / 1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;""
+    ></button>
+    <button id="nextImage" class= "button" style="
+    aspect-ratio : 1 / 1;
+    width: 18%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%; right: 10px;"> 
+   </button>
+   </div>
+    </div>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: 2rem;">
+    <div><p style="text-align: center; ">A digital etch a skecth of some ideations <br/>CRAZY EIGHTS <br/> PAPER PROTOTYPING <br /> Landed on the idea of having a 'Code Catalogue' <br/>sketches for how some of the early weeks could look and function
+    </p></div>
+    <img src="./img/Screenshot4.png"/>
+    <a href="./gif/index.html"><img src="./gif/IMG_9509.gif" style="transform: rotate(270deg); width: 100%; box-shadow: 5px 5px 10px 2px rgba(124, 124, 124, 0.8);"/></a>
+    <div>Early Developments of Workbook 2A</div>
+    <img src="./img/Screenshot3.png" style="box-shadow: 5px 5px 10px 2px; width:400px"/>
+    <img src="./img/Screenshot2.png" style="box-shadow: 5px 5px 10px 2px; width:400px"/>
+    <img src="./img/Screenshot1.png" style="box-shadow: 5px 5px 10px 2px; width:400px"/>    
+    <div>Questions</div>
+    <div>Learning Links</div>
+    <a href="../index.html"><button>Back home</button></a>
+    </div>
+    <script>
+        const drawing = document.getElementById("drawing");
+const nextImage = document.getElementById("nextImage");
+
+
+nextImage.addEventListener("click", function() {
+  if (drawing.src.endsWith("Week2-assets-02.png")) {
+  drawing.src = "./img/Week2-assets-01.png";
+} else if (drawing.src.endsWith("Week2-assets-01.png")) {
+  drawing.src = "./img/Week2-assets-03.png";
+} else if (drawing.src.endsWith("Week2-assets-03.png")) {
+  drawing.src = "./img/Week2-assets-04.png";
+} else if (drawing.src.endsWith("Week2-assets-04.png")) {
+  drawing.src = "./img/Week2-assets-05.png";
+} else if (drawing.src.endsWith("Week2-assets-05.png")) {
+  drawing.src = "./img/Week2-assets-06.png";
+} else if (drawing.src.endsWith("Week2-assets-06.png")) {
+    drawing.src = "./img/Week2-assets-07.png";
+} else if (drawing.src.endsWith("Week2-assets-07.png")) {
+  drawing.src = "./img/Week2-assets-02.png";
+} 
+});
+// const drawing = document.getElementById("drawing");
+const previousImage = document.getElementById("previousImage");
+
+
+previousImage.addEventListener("click", function() {
+  if (drawing.src.endsWith("Week2-assets-02.png")) {
+  drawing.src = "./img/Week2-assets-07.png";
+} else if (drawing.src.endsWith("Week2-assets-01.png")) {
+  drawing.src = "./img/Week2-assets-02.png";
+} else if (drawing.src.endsWith("Week2-assets-03.png")) {
+  drawing.src = "./img/Week2-assets-02.png";
+} else if (drawing.src.endsWith("Week2-assets-04.png")) {
+  drawing.src = "./img/Week2-assets-03.png";
+} else if (drawing.src.endsWith("Week2-assets-05.png")) {
+  drawing.src = "./img/Week2-assets-04.png";
+} else if (drawing.src.endsWith("Week2-assets-06.png")) {
+    drawing.src = "./img/Week2-assets-05.png";
+} else if (drawing.src.endsWith("Week2-assets-07.png")) {
+  drawing.src = "./img/Week2-assets-06.png";
+} 
+});
+    </script>
+</body>
+</html>
