@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Catalogue</title>
+    <style>
+        @font-face {
+        font-family: WorkSans;
+        src: url(/WorkSans-VariableFont_wght.ttf);
+      }
+        body {
+            background-color: yellow;
+
+        }
+        h1 {
+            color: blue;
+            font-family: WorkSans;
+            line-height: 3rem;
+            font-size: 24rem;
+            text-align: left;
+            font-weight: 900;
+        }
+        h2 {
+            font-family: WorkSans;
+            font-weight: 600;
+            font-size: 4rem;
+            color: rgb(0, 0, 0);
+            background-color: white;
+            
+        }
+        #code {
+            vertical-align: center;
+        }
+        #catalogue {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            margin-left: 2rem;
+            /* line-height: 1rem; */
+            
+            /* position: absolute; */
+        }
+        #header {
+            /* background-color: rgb(182, 203, 221); */
+            height: 20rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            padding-left: 2rem;
+        }
+        #side {
+            width: 30%;
+            height: 100%;
+            /* margin-top: 4rem; */
+            /* background-color: rgb(182, 203, 221); */
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            /* align-items: left;
+            text-align: left; */
+        }
+        .flexWrapper {
+            padding-left: 30%;
+            padding-top: 7%;
+            display: flex;
+            flex-direction: column;
+
+        }
+        .Weeks {
+            position: relative;
+        }
+        .bottomLeft {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+        }
+        .topRight {
+            position: absolute;
+            top: 8px;
+            left: 400px;
+        }
+        a {
+            text-decoration: none;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="header"><h1 id="code">CODE</h1></div>
+    <div id="side"><h1 id="catalogue">ATALOGUE</h1></div>
+    <div class="flexWrapper">
+        <div class="Weeks">
+            <img src="./img/susan-holt-simpson-H7SCRwU1aiM-unsplash.jpg" style="width: 700px;"/>
+            <div class="bottomLeft"><a href="./week1/index.html"><h2>Week 1</h2></a></div>
+        </div>
+        <div class="Weeks">
+            <img src="./img/44602408206366.jpg" style="width: 700px;"/>
+            <div class="bottomLeft"><a href="./week2/index.html"><h2>Week 2</h2></a></div>
+        </div>
+        <div class="Weeks">
+            <img src="./img/kristaps-solims-O1wG_svORQE-unsplash.jpg" style="width: 700px"/>
+            <div class="topRight"><a href="./week3/index.html"><h2>Week 3</h2></a></div>
+        </div>
+    </div>
+</body>
+</html>
