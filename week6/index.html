@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="lamp.js"></script>
+    <title>Week6</title>
+    <style>
+        @font-face {
+        font-family: WorkSans;
+        src: url(/WorkSans-VariableFont_wght.ttf);
+      }
+        body {
+          padding: 50px;
+          margin: 0;
+          font: WorkSans;
+           font-size: 16px; 
+        }
+        h1 {
+            font-family: WorkSans;
+            text-align: left;
+            font-size: 100px;
+            font-weight: 200;
+            z-index: 100;
+            
+        }
+        h2 {
+            font-family: WorkSans;
+            /* text-align: center; */
+            font-size: 30px;
+            
+            font-weight: 400;
+        }
+        p {
+            font-family: WorkSans;
+            /* text-align: center; */
+            font-size: 20px;
+            font-weight: 200;
+            padding: 0;
+            margin: 0;
+            
+        }
+        #lamp-container {
+            position: fixed;
+            top: 400px;
+            left: 900px;
+            z-index: 100;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding: 10px;
+        }
+
+        #black{
+            background-color: black;
+            /* position: absolute; */
+            width: 100%;
+            height: 100%;
+            position:fixed;
+            top:0px;
+            left:0px;
+            z-index:10;
+        }
+        .hidden {
+            display: none;
+            /* position: fixed; */
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="../index2.html"><img src="./img/cat.png" style ="position: fixed; top: 100px; right: 50px; width: 100px; z-index:500;"/></a>
+    <div id="wrapper">
+        <h1>Week 6</h1>
+        <div class="row">
+            <div class="column">
+                <img src="./img/radial.JPG"/>
+            </div>
+            <div class="column">
+                <h2>Data Visualisation</h2>
+                <p>An in class group activity, visualising data with objects we had in our bags. Ours was a radial presentation of our things, with the closer an item being to the hardrive, the longer one would spend looking for it if it was lost. So, the lip balm being furtherst away would only get a momentarily look around oneself before moving on.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="./img/Dance.png"/>
+            </div>
+            <div class="column">
+                <h2>Image and Sound</h2>
+                <a href="./INT_WK6/index.html"><button>DANCE NOW!</button></a>
+                <p>An in class walkthrough of creating a generative sketch that is a visualisation of the sound that plays. </p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <h2>p5.js with html</h2><p><p>I used <a href ="https://www.joemckaystudio.com/multisketches/\\">this site</a> as well as the <a href="https://p5js.org/examples/advanced-canvas-rendering-multiple-canvases/#:~:text=By%20default%2C%20p5%20runs%20in,may%20have%20its%20own%20canvas.">p5.js.org reference</a>to help with Instance Mode so I could have multiple p5 sketches on the same js file. This was helpful to then have them connected to divs in the html. I still ran into a few bugs and so only had multiple sketches if they were simple. For the Code Cat homepage, I built it entirely as a p5 sketch. I tried using createA() but ran into problems trying to make a shape rather than words the link. In the end I used a mousePressed function with window.location.href. </p></p>
+            </div>
+            <div class="column">
+                <h2>p5 play this week</h2><p>
+                    adding sound and tracking data of the audio to adjust different visual parameters of the sketch
+                </br>
+
+                    loop</br>
+                    push and pull</br>
+                    variables</br>
+                    let variable</br>
+                    if and else </br>
+                    console log</br>
+                    
+                    mousePressed</br>
+                    keyPressed</br>
+                     </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="./img/lamp-code.png"/>
+            </div>
+            <div class="column">
+                <h2>Lamp p5 sketch</h2>
+                <p>Initial js code for the little lamp in bottom left corner. I added in the yellow quad acting as the lamp's light to also change as it is clicked. I think it's a little buggy as I have a mouse clicked function within the js and an onclick within the html div, sometimes they don't line up together.  </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="./img/dearData.png"/>
+            </div>
+            <div class="column">
+                <h2>Dear Data</h2>
+                <p>A project between Giorgia Lupi and Stefanie Posavec. They would send postcards to eachother and each would have a different graph or visualisation of some kind of data from their lives. Always presented with a key so as for the other to understand. This project went on for a year, and it shows many different, creative ways to present data. I love the hand drawn roughness to it, yet still so meticulous</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="./img/NathalieMiebech.jpg"/>
+            </div>
+            <div class="column">
+                <h2>Nathalie Miebech</h2>
+                <p>Nathalie Miebech is an artist that creates beautiful, colourful sculptures that represent different sets of data. Some are based on extreme weather events such as Hurricane Maria and Hurricane Sandy. I'm particularly drawn to the 3D Musical Scores.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="./img/Haacke.jpg"/>
+            </div>
+            <div class="column">
+                <h2>Hans Haacke</h2>
+                <p>Haacke is a conceptual artist from Germany who involves data in his work. They feel so tangible and grounded. The data has become a kind of material that adds a further bias to how we look at it.Dealing with political and social themes, he shows how data and art provide an effective combination for activism. </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="./img/sukgo.png"/>
+            </div>
+            <div class="column">
+                <h2>Chirming</h2>
+                <p>Visualisation of bird sounds by Sukgo. I love how delicate and intricate the patterns are, they challenge assumptions about data visualisation. The shapes are organic. </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="./img/W.EDuBois.png"/>
+            </div>
+            <div class="column">
+                <h2>W.E.B Du Bois</h2>
+                <p>Du Bois used data visualisation as activism more than a hundred years ago. He explored many new chart types, and they still feel contemporary. A lot of them are interested in the racial story of America. </p>
+            </div>
+        </div>
+    </div>
+    <div id="black" class="hidden"></div>
+  
+    <div id="lamp-container"><div id="lampSketch" onclick="toggleHidden()"></div></div>
+    <script>
+        function toggleHidden() {
+var element = document.getElementById("black");
+if (!element.classList.contains("hidden")) {
+element.classList.add("hidden");
+} else {
+element.classList.toggle("hidden");
+}
+}
+    </script>
+</body>
+</html>
