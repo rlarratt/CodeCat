@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week5</title>
+    <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="INT_molnar.js"></script>
+    <!-- <script language="javascript" type="text/javascript" src="INT_WK5.js"></script> -->
+   <style>
+        @font-face {
+        font-family: WorkSans;
+        src: url(/WorkSans-VariableFont_wght.ttf);
+      }
+        body {
+          padding: 60px;
+          margin: 0;
+          font: WorkSans;
+           font-size: 16px; 
+        }
+        h1 {
+            font-family: WorkSans;
+            text-align: center;
+            font-size: 100px;
+            font-weight: 200;
+        }
+        h2 {
+            font-family: WorkSans;
+            /* text-align: center; */
+            font-size: 30px;
+            
+            font-weight: 400;
+        }
+        p {
+            font-family: WorkSans;
+            /* text-align: center; */
+            font-size: 20px;
+            font-weight: 200;
+            padding: 0;
+            margin: 0;
+            
+        }
+
+
+        #p5sketch{
+            padding: 10px;
+            border: 5px, solid, black;
+        }
+
+        .img {
+
+        }
+        /* #wrapper {
+          border: 50px, solid, black;
+          z-index: 10;
+          width: 1300px;
+          height: 750px;
+          top: 0;
+          position: absolute;
+        } */
+        #TV {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+          border: 30px, solid, black;
+          border-radius: 10px;
+        }
+        .row {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        .slot {
+          width: 420px;
+          height: 250px;
+        }
+      </style>
+</head>
+<body>
+  <a href="../index2.html"><img src="./img/cat.png" style ="position: fixed; top: 100px; right: 50px; width: 100px; z-index:500;"/></a>
+  <div style="width: 100px; height: 5px; background-color: black; position: absolute; left: 725px; top: 40px; transform: rotate(135deg);"></div>
+  <div style="width: 100px; height: 5px; background-color: black; position: absolute; left: 625px; top: 40px; transform: rotate(45deg);"></div>
+
+  <div id="wrapper"></div>
+    <div id="TV">
+      <div class="row">
+        <a href="./INT_WK5/index.html"><img src="./img/pointilism.png" class="slot"/></a>
+        <a href="https://openprocessing.org/sketch/916659"><img src="./img/circle.gif" class="slot"/></a>
+        <a href="./INT_WK5_CAPTURe/index.html"><img src="./img/Capture2.gif" class="slot"/></a>
+      </div>
+      <div class="row">
+        <!-- <div id="p5sketch"></div></br> -->
+        <a href="./INT_molnar.js"><img src="./img/MolnarTrial.gif" class="slot"/></a>
+        <div style="width:400px;" class="slot"><h1>Week 5</h1></div>
+        <a href="https://lateralaction.com/articles/tyler-hobbs/"><img src="./img/afterwardstyler.png" class="slot"/></a>
+      </div>
+      <div class="row">
+        <div style="width:400px;" class="slot"><p>Pointilism sketch </br> Generative art done through p5 by Che-Yu Wu </br>Sketch using capture </br>Pointilism sketch </br> Molnar art inspired sketch </br> Random Cube by Francis Russell </br> Playing with textToPoints and movement</p></div>
+        <a href="https://dispatchreview.info/Random-Cube"><img src="./img/Cube.gif" class="slot"/></a>
+        <a href="./INT_text/index.html"><img src="./img/textTo.png" class="slot"/></a>
+      </div>
+    </div>
+    
+    <!-- <div id="p5sketch2"></div> -->
+    
+</body>
+</html>
