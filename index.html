@@ -3,115 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Catalogue</title>
+    <title>Document</title>
     <style>
         @font-face {
         font-family: WorkSans;
-        src: url(./data/WorkSans-VariableFont_wght.ttf) format('truetype');
+        src: url(/WorkSans-VariableFont_wght.ttf);
       }
-        body {
-            background-color: yellow;
+      h1 {
+            font-family: WorkSans;
+            text-align: center;
+            font-size: 200px;
+            font-weight: 200;
+            margin-bottom: 250px;
 
+            /* z-index: 100; */
+            
         }
-        h1 {
-            color: blue;
+        p {
             font-family: WorkSans;
-            line-height: 3rem;
-            font-size: 24rem;
-            text-align: left;
-            font-weight: 900;
-        }
-        h2 {
-            font-family: WorkSans;
-            font-weight: 600;
-            font-size: 4rem;
-            color: rgb(0, 0, 0);
-            background-color: white;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 200;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            padding: 50px;
+            /* margin-left: 30px; */
             
         }
-         h3 {
-            font-family: WorkSans;
-            font-weight: 300;
-            font-size: 2rem;
-            color: rgb(0, 0, 0);
-            
-            
+        .icon1 {
+            height: 200px;
+            width: 200px;
+            background-image: url(./icon-03.png);
+            background-size: cover;
         }
-        #code {
-            vertical-align: center;
+        .icon1:hover {
+            background-image: url(./issue-03.png);
         }
-        #catalogue {
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            margin-left: 2rem;
-            /* line-height: 1rem; */
-            
-            /* position: absolute; */
+        .icon2 {
+            height: 200px;
+            width: 200px;
+            background-image: url(./icon-02.png);
+            background-size: cover;
         }
-        #header {
-            /* background-color: rgb(182, 203, 221); */
-            height: 20rem;
+        .icon2:hover {
+            background-image: url(./issue-02.png);
+        }
+        .icon3 {
+            height: 200px;
+            width: 200px;
+            background-image: url(./icon-01.png);
+            background-size: cover;
+        }
+        .icon3:hover {
+            background-image: url(./issue-01.png);
+        }
+        .row {
             display: flex;
             flex-direction: row;
-            justify-content: left;
-            align-items: center;
-            padding-left: 2rem;
-        }
-        #side {
-            width: 30%;
-            height: 100%;
-            /* margin-top: 4rem; */
-            /* background-color: rgb(182, 203, 221); */
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            /* align-items: left;
-            text-align: left; */
-        }
-        .flexWrapper {
-            padding-left: 30%;
-            padding-top: 7%;
-            display: flex;
-            flex-direction: column;
+            justify-content: space-around;
 
         }
-        .Weeks {
-            position: relative;
-        }
-        .bottomLeft {
-            position: absolute;
-            bottom: 8px;
-            left: 16px;
-        }
-        .topRight {
-            position: absolute;
-            top: 8px;
-            left: 400px;
-        }
-        a {
-            text-decoration: none;
-        }
-       
-    </style>
+        </style>
+
 </head>
 <body>
-   <a href="./index2.html"><div style="width:350px; background-color: white; position: absolute; top: 200px; right:50px; padding:10px;"><h3>click here for wk3-6!</h3></div></a>
-    <a href="./index2_copy.html"><div style="width:350px; background-color: white; position: absolute; top: 300px; right:50px; padding:10px;">if that doesn't work pls click here</div></a>
-    <div id="header"><h1 id="code">CODE</h1></div>
-    <div id="side"><h1 id="catalogue">ATALOGUE</h1></div>
-    <div class="flexWrapper">
-        <div class="Weeks">
-            <img src="./img/susan-holt-simpson-H7SCRwU1aiM-unsplash.jpg" style="width: 700px;"/>
-            <div class="bottomLeft"><a href="./week1/index.html"><h2>Week 1</h2></a></div>
-        </div>
-        <div class="Weeks">
-            <img src="./img/44602408206366.jpg" style="width: 700px;"/>
-            <div class="bottomLeft"><a href="./week2/index.html"><h2>Week 2</h2></a></div>
-        </div>
-        <div class="Weeks">
-            <img src="./img/kristaps-solims-O1wG_svORQE-unsplash.jpg" style="width: 700px"/>
-            <div class="topRight"><a href="./week3/index.html"><h2>Week 3</h2></a></div>
-        </div>
+    <h1>CODE CATALOGUE</h1>
+    <div class="row">
+        <a href="./weeks/index.html"><div class="icon1"></div></a>
+        <a href="./weeks/index2_copy.html"><div class="icon2"></div></a>
+        <a href="./weeks/week7-9/html_2.html"><div class="icon3"></div></a>
     </div>
+    <p>An online workbook cataloguing the beginnings of Rebekah's coding. Now in three issues</p>
 </body>
 </html>
