@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 7</title>
+        <style>
+            @font-face {
+        font-family: WorkSans;
+        src: url(/WorkSans-VariableFont_wght.ttf);
+      }
+      
+      h1 {
+            font-family: WorkSans;
+            text-align: center;
+            font-size: 80px;
+            font-weight: 200;
+
+            /* z-index: 100; */
+            
+        }
+        h2 {
+            font-family: WorkSans;
+            /* text-align: center; */
+            font-size: 30px;
+            margin-left: 30px;
+            font-weight: 400;
+        }
+        p {
+            font-family: WorkSans;
+            /* text-align: center; */
+            font-size: 20px;
+            font-weight: 200;
+            padding: 0;
+            margin-left: 30px;
+            
+        }
+        body {
+            padding: 50px;
+          margin: 0;
+          font: WorkSans;
+           font-size: 16px; 
+           
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        #wrapper_1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-bottom: 30px;
+            width: 1200px;
+            height: 200px;
+        }
+        #cover {
+            display: flex;
+                flex-direction: column;
+                /* padding: 20px; */
+                border:6px solid black;
+                background-color: aliceblue;
+                width: 600px;
+                height: 200px;
+        }
+            .spread {
+                display: flex;
+                flex-direction: row;
+                width: 1200px;
+                height: 700px;
+                border:6px solid black;
+                background-color: aliceblue;
+                
+            }
+            .page {
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                border:2px solid black;
+                
+                width: 50%;
+                height: 94%;
+            }
+            .pageI {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: left;
+                
+                padding: 20px;
+                border:2px solid black;
+                
+                width: 50%;
+                height: 94%;
+            }
+            .pageIleft {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: right;
+                
+                padding: 20px;
+                border:2px solid black;
+                
+                width: 50%;
+                height: 94%;
+            }
+            .pageT {
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                /* padding-left: 70px; */
+                border:2px solid black;
+                
+                width: 50%;
+                height: 94%;
+            }
+            .pageTleft {
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                border:2px solid black;
+                text-align: right;
+                width: 50%;
+                height: 94%;
+            }
+            .wide {
+                width: 90%;
+                margin-left: 30px;
+            }
+            .full{
+                height: 95%;
+                margin-right:30px;
+                /* margin-left: 60px; */
+            }
+            .fullR{
+                height: 95%;
+                margin-left: 30px;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <div class="wrapper">
+        <div id="wrapper_1">
+                <div id="cover">
+                    <h1>Week 7</h1>
+                    <h2> </h2>
+                    
+                </div>    
+        </div>
+        </div>
+        <div class="wrapper">
+            <div class="spread">
+                <div class="pageIleft">
+                    <img src="./img/week7_1.jpg" class="full">
+                </div>
+                <div class="pageT">
+                    <h2>Physical Computing Begins</h2>
+                    <p>First week of classes at the Telstra Creator Space. This was the first time I've ever played with an arduino. My older brother used to have one that he messed around with but it always felt a little like something his brain could do and mine couldn't. I was a little intimidated by all the little parts in the kit that I had no clue the names or functions of. It was pretty cool following along with a demo and making the bits and pieces do something, even if it was only a light turning on. I actually found it made a lot of sense, and reminded me of highschool chem, and that want to understand how things work.We got quite a few of the names wrong, so I wouldn't use the left image as a future guide. </p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="spread">
+                <div class="pageIleft">
+                    <img src="./img/week7.gif" class="full">
+                </div>
+                <div class="pageI">
+                    <img src="./img/wk7_dim.gif" class="fullR">
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="spread">
+                <div class="pageI">
+                    <img src="./img/sisters.png" class="wide">
+                </div>
+                <div class="pageT">
+                    <h2>Sisters with Transistors</h2>
+                    <a href="https://sisterswithtransistors.com/"><p>https://sisterswithtransistors.com/</p></a>
+                    <p>What a joy this movie was. As someone who isn't particularly partial to electronic music, I was surprised how much I liked it. Unfortunately before this movie I had never heard of any of the names. It was also well edited and put together. </p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="spread">
+                <div class="pageTleft">
+                    <h2 style="margin-right:30px;">Mini Weather Station</h2>
+                    <a href="https://www.instructables.com/Mini-weather-station-with-Attiny85/"><p style="margin-right:30px;">https://www.instructables.com/Mini-weather...</p></a>
+                    <p style="margin-right:30px;">Mini Weather Station by diy_bloke. Measures humidity and temperature. I like this project mainly for its simplicity and kind of uselessness, there's also something about a small, lofi electronic thing, like a trinket that does something. 
+
+                    </p>
+                </div>
+                <div class="pageI">
+                    <img src="./img/weather.png" class="wide">
+                </div>
+                
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="spread">
+                <div class="pageI">
+                    <img src="./img/Cant.png" class="wide">
+                </div>
+                <div class="pageT">
+                    <h2>Can't Help Myslef</h2>
+                    <a href="https://www.guggenheim.org/artwork/34812"> <p>https://www.guggenheim.org/artwork/34812</p></a>
+                    <p>An artwork by Sun Yuan & Peng Yu, for the Guggenheim Musem. The work seems to have been recently highly circulated in the media, I'd seen it come up on instagram a few times before. I can see why, its so moving and affective. You really do feel sympathetic towards this machine. A simple concept, so deftly expressed. I didn't know that they had the code accessible to the viewer that the was being used but I really like that openness and don't think it takes away from the work. </p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="spread">
+                <div class="pageI">
+                    <img src="./img/ballet.png" class="full">
+                </div>
+                <div class="pageT">
+                    <h2>E-Traces</h2>
+                    <a href="https://makezine.com/article/technology/arduino/e-traces-ballet-slippers-that-make-drawings-from-the-dancers-movements/"><p>https://makezine.com/article/technology/arduino...</p></a>
+                    <p>E-Traces by Lesia Trubat Gonzalez. Ballet slippers that track the dancer's movement which is turned into drawings. I like when one type of art is in dialogue with another. Especially something you may not normally put together, like painting and dance, yet makes a lot of sense when thinking about the connection between gesture and mark making. </p>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
